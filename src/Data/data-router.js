@@ -3,6 +3,7 @@ const DataService = require("./data-service")
 const dataRouter = express.Router()
 const jsonParser = express.json()
 const path = require("path")
+const moment = require("moment")
 
 const serializeData = data => ({
 	id: data.id,
@@ -55,11 +56,82 @@ dataRouter
 			.catch(next)
 	})
 	.post(jsonParser, (req, res, next) => {
-		const { date, department, shift } = req.body
+		const {
+			date,
+			department,
+			shift,
+			goal_1,
+			produced_1,
+			downtime_1,
+			reason_1,
+			goal_2,
+			produced_2,
+			downtime_2,
+			reason_2,
+			goal_3,
+			produced_3,
+			downtime_3,
+			reason_3,
+			goal_4,
+			produced_4,
+			downtime_4,
+			reason_4,
+			goal_5,
+			produced_5,
+			downtime_5,
+			reason_5,
+			goal_6,
+			produced_6,
+			downtime_6,
+			reason_6,
+			goal_7,
+			produced_7,
+			downtime_7,
+			reason_7,
+			goal_8,
+			produced_8,
+			downtime_8,
+			reason_8
+		} = req.body
 		const newData = {
 			date,
 			department,
-			shift
+			shift,
+			date,
+			department,
+			shift,
+			goal_1,
+			produced_1,
+			downtime_1,
+			reason_1,
+			goal_2,
+			produced_2,
+			downtime_2,
+			reason_2,
+			goal_3,
+			produced_3,
+			downtime_3,
+			reason_3,
+			goal_4,
+			produced_4,
+			downtime_4,
+			reason_4,
+			goal_5,
+			produced_5,
+			downtime_5,
+			reason_5,
+			goal_6,
+			produced_6,
+			downtime_6,
+			reason_6,
+			goal_7,
+			produced_7,
+			downtime_7,
+			reason_7,
+			goal_8,
+			produced_8,
+			downtime_8,
+			reason_8
 		}
 
 		for (const [key, value] of Object.entries(newData)) {
@@ -90,15 +162,8 @@ dataRouter
 						error: { message: `Data doesn't exist` }
 					})
 				}
-				res.d = d // save the data for the next middleware
+				res.data = d // save the data for the next middleware
 				next() // don't forget to call next so the next middleware happens!
-			})
-			.catch(next)
-	})
-	.delete((req, res, next) => {
-		DataService.deleteData(req.app.get("db"), req.params.id)
-			.then(() => {
-				res.status(204).end()
 			})
 			.catch(next)
 	})
@@ -181,7 +246,7 @@ dataRouter
 		if (numberOfValues === 0) {
 			return res.status(400).json({
 				error: {
-					message: `Request body must contain either`
+					message: `Request body must constain 'date', 'department', 'shift'`
 				}
 			})
 		}
@@ -193,6 +258,13 @@ dataRouter
 	})
 	.get((req, res, next) => {
 		res.json(serializeData(res.data))
+	})
+	.delete((req, res, next) => {
+		DataService.deleteData(req.app.get("db"), req.params.id)
+			.then(() => {
+				res.status(204).end()
+			})
+			.catch(next)
 	})
 
 module.exports = dataRouter
