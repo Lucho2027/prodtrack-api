@@ -135,7 +135,10 @@ dataRouter
 		}
 
 		for (const [key, value] of Object.entries(newData)) {
-			if (value == null) {
+			if (
+				value == null &&
+				(key == "date" || key == "department" || key == "shift")
+			) {
 				return res.status(400).json({
 					error: { message: `Missing '${key}' in request body` }
 				})

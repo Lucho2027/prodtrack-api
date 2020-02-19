@@ -1,4 +1,4 @@
-INSERT INTO data_entry ( date, department, shift,
+INSERT INTO dataentry ( date, department, shift,
 goal_1, produced_1, downtime_1, reason_1,
 goal_2, produced_2, downtime_2, reason_2,
 goal_3, produced_3, downtime_3, reason_3,
