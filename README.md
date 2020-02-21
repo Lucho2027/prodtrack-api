@@ -23,6 +23,27 @@ Run the tests `npm test`
 
 The app was built using PostgreSQL, Knex, JS and Express framework.
 
+The endpoints that currently have services set up for:
+The following will return all of the data entries in the database (see summary for an example of one of the objects this request will yield):
+
+`GET -> /api/dataentry`
+
+The following will return the object with identified with `id` (see summary for an example of the object that this request will yield if the object exists):
+
+`GET -> /api/dataentry/:id`
+
+The following will POST an object to the database identified with `id` (see summary for an example of the object that the API will expect as input) the date, department and shift are required to post a new object:
+
+`POST -> /api/dataentry/:id`
+
+The following will PATCH an object to the database identified with `id` (see summary for an example of the object that the API will expect as input) the date will remain as the original record, department and shift are required to patch/update an object:
+
+`PATCH -> /api/dataentry/:id`
+
+The following will DELETE an object off the database identified with `id` :
+
+`DELETE -> /api/dataentry/:id`
+
 ## Summary
 
 The API will provide and expect information as layed out bellow.
