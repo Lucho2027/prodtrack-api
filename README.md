@@ -2,18 +2,11 @@
 
 ProdTrack-API has been created as part of my first Full-Stack Capstone Project for Thinkful (https://thinkful.com/). It is built as RESTful API that allows CRUD transactions to the database for the ProdTrack app.
 
-## Current Build
-
-Supports GET, POST, PATCH and DELETE by providing a JSON object.
-
-The routes are as follow:
-GET - "/api/dataentry/" and "/api/dataentry/:id"
-POST - "/api/dataentry/:id"
-PATCH - "/api/dataentry/:id"
-
 ## Prerequisites
 
 Before you continue, ensure you have met the following requirements:
+
+Clone repository
 
 Install the node dependencies npm install
 
@@ -69,9 +62,6 @@ reason_8: "Packer Down: Label Dispenser"
 }```
 
 Each object represent a Data entry summary of an 8 hour shift with a goal(units / integer), produced(units / integer), downtime(minutes / integer) and a reason(string). Each object identified with an id, date, department and shift.
-
-
-
 
 ## Technical
 
