@@ -18,11 +18,17 @@ Start nodemon for the application `npm run dev`
 
 Run the tests `npm test`
 
+## Technical
+
+- The app was built using PostgreSQL, Knex, JS and Express framework.
+
 ## Summary
 
 The API will provide and expect information as layed out bellow.
 
-````{
+Each object represent a Data entry summary of an 8 hour shift with a goal(units / integer), produced(units / integer), downtime(minutes / integer) and a reason(string). Each object identified with an id, date, department and shift.
+
+```{
 id: 1,
 date: "2020-02-08T17:31:59.249Z",
 department: "3620",
@@ -59,11 +65,5 @@ goal_8: 263,
 produced_8: 200,
 downtime_8: 10,
 reason_8: "Packer Down: Label Dispenser"
-}```
-
-Each object represent a Data entry summary of an 8 hour shift with a goal(units / integer), produced(units / integer), downtime(minutes / integer) and a reason(string). Each object identified with an id, date, department and shift.
-
-## Technical
-
-- The app was built using PostgreSQL, Knex, JS and Express framework.
-````
+}
+```
