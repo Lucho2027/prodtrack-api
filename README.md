@@ -21,7 +21,7 @@ Run the tests `npm test`
 
 ## Technical
 
-- The app was built using PostgreSQL, Knex, JS and Express framework.
+The app was built using PostgreSQL, Knex, JS and Express framework.
 
 ## Summary
 
