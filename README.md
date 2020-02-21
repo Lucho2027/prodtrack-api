@@ -6,9 +6,10 @@ ProdTrack-API has been created as part of my first Full-Stack Capstone Project f
 
 Before you continue, ensure you have met the following requirements:
 
-Clone repository
-
-Install the node dependencies npm install
+1. Clone this repository to your local machine `git clone PRODTRACK-API-URL NEW-PROJECTS/BRANCH-NAME`
+   `cd` into the cloned repository
+2. Make a fresh start of the git history for this project with `rm -rf .git && git init`
+3. Install the node dependencies `npm install`
 
 ## Scripts
 
